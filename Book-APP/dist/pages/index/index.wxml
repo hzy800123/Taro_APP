@@ -1,0 +1,58 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="index">
+        <view class="at-article">
+            <view class="at-article__h1"><text class="style-header">Book APP</text>
+            </view>
+            <view class="style-new-book">
+                <at-button compid="{{$compid__26}}">Add Book</at-button>
+            </view>
+        </view>
+        <at-modal compid="{{$compid__27}}"></at-modal>
+        <at-modal compid="{{$compid__28}}">
+            <at-modal-header compid="{{$compid__29}}">- Edit Book -</at-modal-header>
+            <at-modal-content>
+                <view class="style-ratingTitle">
+                    <at-icon compid="{{$compid__30}}"></at-icon><text class="style-textTitle">Rating</text> 
+                    <at-rate compid="{{$compid__31}}"></at-rate>
+                </view>
+                <view>
+                    <at-icon compid="{{$compid__32}}"></at-icon><text class="style-textTitle">Title</text>
+                    <at-input compid="{{$compid__33}}"></at-input>
+                </view>
+            </at-modal-content>
+            <at-modal-action>
+                <button bindtap="anonymousFunc7">Cancel</button>
+                <button class="style-modalOKButton" bindtap="anonymousFunc8">OK</button>
+            </at-modal-action>
+        </at-modal>
+        <at-modal compid="{{$compid__34}}">
+            <at-modal-header compid="{{$compid__35}}">Input invalid data</at-modal-header>
+            <at-modal-action>
+                <button bindtap="anonymousFunc9">OK</button>
+            </at-modal-action>
+        </at-modal>
+        <view class="at-row at-row__justify--around">
+            <view class="at-col at-col-2 style-id"><text class="style-tableHeader">#</text>
+            </view>
+            <view class="at-col at-col-3 style-title"><text class="style-tableHeader">Title</text>
+            </view>
+            <view class="at-col at-col-3 style-rating"><text class="style-tableHeader">Rating</text>
+            </view>
+            <view class="at-col at-col-4 style-twoButton"><text class="style-tableHeader">Actions</text>
+            </view>
+        </view>
+        <view wx:key="Index" class="at-row at-row__justify--around" wx:for="{{loopArray2}}" wx:for-item="book" wx:for-index="__index0">
+            <view class="at-col at-col-2 style-id">{{book.$original.id}}</view>
+            <view class="at-col at-col-3 at-col--wrap style-title">{{book.$original.title}}</view>
+            <view class="at-col at-col-3 style-rating">
+                <at-rate compid="{{book.$compid__23}}"></at-rate>
+            </view>
+            <view class="at-col at-col-2 style-buttonEditColumn">
+                <at-button compid="{{book.$compid__24}}">Edit</at-button>
+            </view>
+            <view class="at-col at-col-2 style-buttonDeleteColumn">
+                <at-button compid="{{book.$compid__25}}">Del</at-button>
+            </view>
+        </view>
+    </view>
+</block>

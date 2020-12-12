@@ -1,0 +1,22 @@
+<block wx:if="{{$taroCompReady}}">
+    <view>
+        <at-modal compid="{{$compid__37}}">
+            <at-modal-header compid="{{$compid__38}}">请检查输入字符</at-modal-header>
+            <at-modal-action>
+                <button bindtap="anonymousFunc0">OK</button>
+            </at-modal-action>
+        </at-modal>
+        <view class="style-ratingTitle">
+            <at-icon compid="{{$compid__39}}"></at-icon><text class="style-textTitle">Title</text>
+            <view class="style-inputTitle">
+                <at-input compid="{{$compid__40}}"></at-input>
+            </view>
+        </view>
+        <view class="style-ratingTitle">
+            <at-icon compid="{{$compid__41}}"></at-icon><text class="style-textTitle">Rating</text>
+            <at-rate compid="{{$compid__42}}"></at-rate>
+        </view>
+        <at-button compid="{{$compid__43}}">取消</at-button>
+        <at-button compid="{{$compid__44}}">确定</at-button>
+    </view>
+</block>
